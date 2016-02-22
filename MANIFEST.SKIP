@@ -1,0 +1,9 @@
+.git/*
+.*.swp
+.*.swo
+*.log
+.gitignore
+applications/*
+Makefile.old
+Makefile
+xdg-panel-0.01.tar.gz

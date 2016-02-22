@@ -1,0 +1,24 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=Application
+Name=XDE Panel
+GenericName=Panel
+Comment=Panel for X Desktop Environment.
+Icon=perlpanel-panel
+TryExec=xde-panel
+Exec=sh -c "xde-panel $HOME/.config/xde-panel/${XDG_CURRENT_DESKTOP:-default}/rc.xml"
+Terminal=false
+OnlyShowIn=FLUXBOX;BLACKBOX;OPENBOX;WMAKER;PEKWM;ADWM;WAIMEA;ECHINUS;SCROTWM;
+Categories=System;Utility;XDE;
+StartupNotify=true
+StartupWMClass=xde-panel
+X-AppInstall-Package=xde-panel
+X-GNOME-AutoRestart=true
+X-GNOME-Autostart-Delay=30
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Notify=true
+X-GNOME-Autostart-Phase=Panel
+X-GNOME-Keywords=Panel;
+X-GNOME-Provides=panel
+X-GNOME-UsesNotifications=false
