@@ -8,6 +8,9 @@ if (-d ".git") {
 WriteMakefile(
 	NAME => 'xde-panel',
 	VERSION => $VERSION,
+	LICENSE => 'perl',
+	ABSTRACT => 'EWMH and XDG compliant panel for XDE',
+	AUTHOR => 'Brian Bidulock <bidulock@openss7.org>',
 	EXE_FILES => [qw(
 		xde-panel
 	)],
@@ -44,16 +47,12 @@ WriteMakefile(
 sub MY::postamble {
 	return <<MAKE_FRAG;
 
-.PHONY: install_xdg install_share
-install:: install_xdg install_share
+.PHONY: install_xdg
+install:: install_xdg
 
 install_xdg:
 	install -dm0755 "\$(DESTDIR)/etc"
 	cp -rv xdg "\$(DESTDIR)/etc"
-
-install_share:
-	install -dm0755 "\$(DESTDIR)/\$(PREFIX)"
-	cp -rv share "\$(DESTDIR)/\$(PREFIX)"
 
 MAKE_FRAG
 }
