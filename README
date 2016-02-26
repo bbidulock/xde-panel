@@ -41,7 +41,9 @@ the following commands:
     $> cd xde-panel
     $> PERL_MM_USE_DEFAULT=1 perl Makefile.PL INSTALLDIRS=vendor
     $> make
-    $> make DESTDIR="$pkgdir" install
+    $> make DESTDIR="$pkgdir" INSTALLVENDORSCRIPT=/usr/bin install
+    $> find "$pkgdir" -name '.packlist' -delete
+    $> find "$pkgdir" -name '*.pod' -delete
 
 This will configure, compile and install xde-panel the quickest.  For
 those who would like to spend the extra 15 seconds reading
