@@ -80,6 +80,32 @@ xde-panel -- a wrapper for perlpanel for the X Desktop Environment (XDE)
 
 B<xde-panel> I<CONFIGFILE>
 
+=head1 DESCRIPTION
+
+B<xde-panel> is a small wrapper script for the L<perlpanel(1)> panel
+that provides the ability to specify a configuration file on the command
+line as well as monitoring for an applying XDE GTK-2.0 theme changes to
+be consistent with the window manager theme.  Otherwise, L<perlpanel(1)>
+is invoked in a similar fashion to the original version.
+
+=head1 FILES
+
+=over
+
+=item F</etc/xdg/xde/autostart/xde-panel.desktop>
+
+A F<.desktop> file is also provided so that the panel will autostart for
+the appropriate desktop environments and window manager names.
+
+=item F</etc/xdg/xde/xde-panel/${WMNAME}/rc.xml>
+
+A set of F<rc.xml> L<perlpanel(1)> configuration files is provided that
+should be installed in the user's home directory when changes are made
+to the configuration files.  This is so that different window managers
+under XDE can provide different defaults for the panel.
+
+=back
+
 =head1 HISTORY
 
 =cut
