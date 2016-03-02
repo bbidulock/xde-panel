@@ -106,6 +106,21 @@ under XDE can provide different defaults for the panel.
 
 =back
 
+=head1 BUGS
+
+B<xde-panel> should copy the default configuration file for the window
+manager to the user's directory F<$XDG_CONFIG_HOME> if the file does not
+already exist (or exists with an outdated version) in much the same
+manner as is done for window manager configuration files.
+
+B<xde-panel> should place a copy should be placed in the F<$XDG_RUN_DIR>
+directory so that multiple sessions on multiple hosts for the same user
+do not conflict for NFG mounted home directories.
+
+B<xde-panel> should wait for a window manager to appear before
+initialization and should not rely on the C<AutostartPhase> to properly
+order the startup sequence.
+
 =head1 HISTORY
 
 =cut
