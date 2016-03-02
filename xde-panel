@@ -70,3 +70,17 @@ PerlPanel->new->init;
 
 exit;
 
+=pod
+
+=head1 NAME
+
+xde-panel -- a wrapper for perlpanel for the X Desktop Environment (XDE)
+
+=head1 SYNOPSIS
+
+B<xde-panel> I<CONFIGFILE>
+
+=head1 HISTORY
+
+=cut
+
