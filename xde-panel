@@ -88,6 +88,12 @@ line as well as monitoring for an applying XDE GTK-2.0 theme changes to
 be consistent with the window manager theme.  Otherwise, L<perlpanel(1)>
 is invoked in a similar fashion to the original version.
 
+The major purpose of the B<xde-panel> wrapper script is to change the
+theme of the panel in accordance with the theme that is set for the
+window manager.  This makes the panel appearance better, more consistent
+with the window manager, and makes the panel appear to be native to the
+window manager and desktop environment.
+
 =head1 FILES
 
 =over
