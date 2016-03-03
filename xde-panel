@@ -74,7 +74,7 @@ exit;
 
 =head1 NAME
 
-xde-panel -- a wrapper for perlpanel for the X Desktop Environment (XDE)
+xde-panel - a wrapper for perlpanel for the X Desktop Environment
 
 =head1 SYNOPSIS
 
@@ -129,5 +129,19 @@ order the startup sequence.
 
 =head1 HISTORY
 
+B<xde-panel> was originally part of the F<xde-tools> perl package;
+however, most of the facilities of that package have been ported to
+C<C>, so this package was split off into its own package.
+
+=head1 AUTHOR
+
+Brian Bidulock <bidulock@cpan.org>
+
+=head1 SEE ALSO
+
+L<perlpanel(1)>.
+
 =cut
+
+# vim: set sw=4 tw=72 nocin spell spelllang=en_ca:
 
