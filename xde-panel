@@ -94,6 +94,39 @@ window manager.  This makes the panel appearance better, more consistent
 with the window manager, and makes the panel appear to be native to the
 window manager and desktop environment.
 
+=head1 BEHAVIOUR
+
+On startup, B<xde-panel> should wait for a window manager to appear.  If
+the command L<xde-wait(1)>, is available, B<xde-panel> will use it to
+wait for a window manager to appear or for 2 seconds if no window
+manager appears.
+
+Once a window manager has appeared or the operation has timed out
+waiting for a window manager to appear, B<xde-panel> will test for the
+window manager name by checking the C<_XDE_WM_NAME> property on the root
+window.  If the command L<xde-identify(1)> is available, B<xde-panel>
+will call it to set root window properties if no C<_XDE_WM_NAME>
+property is available on the root window.  If a subsequent check of the
+property still yields no window manager name, B<xde-panel> will use the
+C<$XDG_CURRENT_DESKTOP> environment variable to determine which profile
+to use.  If neither approach yields a profile name, the default profile
+name, C<default>, will be used instead.
+
+B<xde-panel> then checks the presence of a configuration file for the
+profile in the user's XDG home configuration directory as indicated by
+the C<$XDG_CONFIG_HOME> environment variable, or by default,
+F<~/.config>.  The sub-directory C<xde-panel> is checked for the
+presence of a sub-directory with the profile name and a configuration
+file by the name of F<rc.xml>.  The resulting path is
+F<~/.config/xde-panel/${PROFILE}/rc.xml>.
+
+If a startup file does not exist, B<xde-panel> looks in the system XDG
+configuration directories specified by the C<$XDG_CONFIG_DIRS>
+environment variable, or F</etc/xdg> if not specified.  The typical path
+is F</etc/xdg/xde-panel/${PROFILE}/rc.xml>.  If such a file exists, it
+will be copied to the user's configuration home directory and used as
+the configuration file.
+
 =head1 FILES
 
 =over
