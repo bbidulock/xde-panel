@@ -6,7 +6,7 @@ if (-d ".git") {
 	$VERSION =~ s/\.g[0-9a-f]{7,}$//;
 }
 WriteMakefile(
-	NAME => 'xde-panel',
+	NAME => 'XDE::Panel',
 	VERSION => $VERSION,
 	LICENSE => 'perl',
 	ABSTRACT => 'EWMH and XDG compliant panel for XDE',
